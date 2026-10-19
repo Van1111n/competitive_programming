@@ -65,16 +65,19 @@ struct Program {
 };
 
 int main() {
+    std::ios::sync_with_stdio(false);
+    std::cin.tie(nullptr);
+
     int t;
     std::cin >> t;
     while (t--) {
         int time[5];
         int prograNum, quantum;
+        std::string tmp;
         std::cin >> prograNum >> time[0] >> time[1] >> time[2] >> time[3] >> time[4] >> quantum;
-        getchar();
+        getline(std::cin, tmp);
 
         std::vector<Program> programs(prograNum + 1);
-        std::string tmp;
         tmp.reserve(8);
         for (int crtId = 1; crtId <= prograNum; crtId++) {
             while (1) {
