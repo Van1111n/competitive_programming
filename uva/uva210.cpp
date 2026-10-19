@@ -137,6 +137,6 @@ int main() {
         prograEnd:
             continue;
         }
-        std::cout << '\n';
+        if (t!=0) std::cout << '\n';
     }
 }
